@@ -1,4 +1,4 @@
-# THong Kong Half-Year Daily Mean Temperature
+# Hong Kong Half-Year Daily Mean Temperature
 
 
 ![Hong Kong Jan-Jun 2026 Daily Mean Temperature](out/hk-temp-jan-jun-2026.png)
@@ -9,13 +9,11 @@ Daily average air temperature in Hong Kong rises and falls over the first six mo
 
 ## The source
 https://data.gov.hk/en-data/dataset/hk-hko-rss-daily-temperature-info-hko
-<!-- A link to the page or endpoint the file came from, and one line on what is in
 Data from Hong Kong Observatory public meteorological records. The CSV file contains daily weather records starting from 2026-01-01. Each row represents one calendar day, with columns for year, month, day, daily mean temperature in degrees Celsius, and a quality flag. The full dataset originally includes dates up to August 31.
 
 
 ## What the picture shows
-The graph plots half-year temperature changes from January to June, with the line colour smoothly shifting from cool blue at low temperatures to warm orange at high temperatures. The visualisation discards all data from July and August, limiting the time range to six months. It also removes missing-value rows and compresses raw daily readings into connected line segments, losing the standalone identity of each individual data point.
-<!--
+The graph plots half-year temperature changes from January to June, with the line colour smoothly shifting from cool blue at low temperatures to warm orange at high temperatures. The visualisation discards all data from July and August, limiting the time range to six months. 
 
 ## Run it
 
