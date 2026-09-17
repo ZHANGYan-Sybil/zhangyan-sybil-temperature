@@ -112,7 +112,7 @@ def main():
     fig, ax = plt.subplots(figsize=(12, 5))
     ax.add_collection(lc)
 
-    ax.set_xlim(0.8, 6.2)
+    ax.set_xlim(0.8, 7.0)
     ax.set_xticks([1, 2, 3, 4, 5, 6])
     ax.set_xticklabels(["Jan", "Feb", "Mar", "Apr", "May", "Jun"])
 
@@ -125,6 +125,7 @@ def main():
 
     ax.grid(color="#dddddd", linestyle="-", linewidth=0.6)
     ax.set_axisbelow(True)
+
 
     fig.tight_layout()
     OUT.mkdir(exist_ok=True)
