@@ -1,30 +1,21 @@
-# The phenomenon
+# THong Kong Half-Year Daily Mean Temperature
 
-<!-- This is the SD5913 assignment 2 template. Everything in this file is yours to
-replace, and the check counts words: comments like this one are not words, so
-delete each one as you write. Start with the heading: name the phenomenon.
 
-Then, in this order, at least 150 words in total.
-
-New to folders, paths, or the files here whose names start with a dot? Read
-https://github.com/sd5913/pfad/blob/2026/reference/files.md first. Ten minutes. -->
-
-![what the picture is](out/plot.png)
+![Hong Kong Jan-Jun 2026 Daily Mean Temperature](out/hk-temp-jan-jun-2026.png)
 
 ## The phenomenon
 
-<!-- What goes up and down, and why you looked at it. -->
+Daily average air temperature in Hong Kong rises and falls over the first six months of 2026. From January to June, the baseline temperature gradually climbs from cool winter conditions to hot summer weather, while short-term weather fluctuations create sharp day-to-day temperature oscillations. I chose this dataset because temperature is a continuous natural phenomenon that works well for a gradient-coloured line: colour can directly encode the temperature value along the curve, so viewers can read both time trend and thermal intensity at a glance.
 
 ## The source
-
+https://data.gov.hk/en-data/dataset/hk-hko-rss-daily-temperature-info-hko
 <!-- A link to the page or endpoint the file came from, and one line on what is in
-the file: how many rows, what a row means, what the units are. -->
+Data from Hong Kong Observatory public meteorological records. The CSV file contains daily weather records starting from 2026-01-01. Each row represents one calendar day, with columns for year, month, day, daily mean temperature in degrees Celsius, and a quality flag. The full dataset originally includes dates up to August 31.
+
 
 ## What the picture shows
-
-<!-- Two or three sentences. Including what it hides: every transformation throws
-something away, and naming what yours threw away is the easiest way to sound like
-you know what you did. -->
+The graph plots half-year temperature changes from January to June, with the line colour smoothly shifting from cool blue at low temperatures to warm orange at high temperatures. The visualisation discards all data from July and August, limiting the time range to six months. It also removes missing-value rows and compresses raw daily readings into connected line segments, losing the standalone identity of each individual data point.
+<!--
 
 ## Run it
 
