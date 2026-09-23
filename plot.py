@@ -6,6 +6,7 @@
 Assignment2: Hong Kong Jan‑Jun 2026 daily mean temperature
 Gradient‑colored line based on temperature value.
 Only keep data Jan‑Jun, discard Jul‑Dec.
+Add red horizontal reference lines at 18℃ and 28℃ to mark cold/hot thresholds.
 uv run plot.py
 """
 import csv
@@ -13,7 +14,6 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 from matplotlib.collections import LineCollection
 import matplotlib.colors as mcolors
-
 # ------------------- 路径定义（已修正，和fetch.py对齐） -------------------
 FILE = "hko-daily-mean-temperature-2026.csv"
 PICTURE = "hk-temp-jan-jun-2026.png"
@@ -21,7 +21,6 @@ HERE = Path(__file__).parent
 DATA = HERE / "data" / FILE
 OUT = HERE / "out"
 # ------------------------------------------------------------------------
-
 # Temperature‑color anchor points (temp ℃ , hex color)
 TEMP_COLOR_KEYPOINTS = [
     (13.4, "#4DB2FF"),
@@ -106,6 +105,11 @@ def main():
     ax.set_xlabel("Month")
     ax.set_ylabel("Daily Mean Temperature (°C)")
     ax.grid(color="#dddddd", linestyle="-", linewidth=0.6)
+    # ========== 新增：18℃ 和 28℃ 红色水平参考线 ==========
+    ax.axhline(y=18, color="#ff3333", linestyle="-", linewidth=1.2, label="Cold threshold: 18℃")
+    ax.axhline(y=28, color="#ff3333", linestyle="-", linewidth=1.2, label="Hot threshold: 28℃")
+    ax.legend(loc="upper right")
+    # =====================================================
     ax.set_axisbelow(True)
     fig.tight_layout()
     OUT.mkdir(exist_ok=True)
