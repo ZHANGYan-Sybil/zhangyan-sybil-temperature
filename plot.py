@@ -106,8 +106,8 @@ def main():
     ax.set_ylabel("Daily Mean Temperature (°C)")
     ax.grid(color="#dddddd", linestyle="-", linewidth=0.6)
     # ========== 新增：18℃ 和 28℃ 红色水平参考线 ==========
-    ax.axhline(y=18, color="#ff3333", linestyle="-", linewidth=1.2, label="Cold threshold: 18℃")
-    ax.axhline(y=28, color="#ff3333", linestyle="-", linewidth=1.2, label="Hot threshold: 28℃")
+    ax.axhline(y=18, color="#ff4444", linestyle="--", linewidth=1, alpha=0.35, label="Cold threshold: 18℃")
+    ax.axhline(y=28, color="#ff4444", linestyle="--", linewidth=1, alpha=0.35, label="Hot threshold: 28℃")
     ax.legend(loc="upper right")
     # =====================================================
     ax.set_axisbelow(True)
