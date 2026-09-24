@@ -18,10 +18,10 @@ The graph plots half-year temperature changes from January to June, with the lin
 ## Run it
 
 ```
-# Static image visualization (original assignment function)
+### Static image visualization
 uv run fetch.py
 uv run plot.py
 
-# Interactive webpage visualization (week04 extension feature)
+### Interactive webpage visualization
 uv run streamlit run app.py
 ```
